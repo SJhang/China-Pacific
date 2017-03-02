@@ -8,6 +8,13 @@
     <%= javascript_include_tag 'application' %>
 
     <script type="text/javascript">
+      <% if logged_in? %>
+          window.currentUser =
+          <%= render('api/user.json.jbuilder', user: current_user).html_safe =%>
+      <% end %>
+    </script>
+
+    <script type="text/javascript">
       window.cloudinary_opts = {
         cloud_name: "<%= ENV['CLOUD_NAME'] %>",
         upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
