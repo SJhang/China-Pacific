@@ -1,0 +1,23 @@
+.splash-page {
+  height: 100%;
+  z-index: 900;
+}
+
+.splash-image {
+  min-height: 600px;
+  margin-top: 80px;
+  background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/v1490422464/pexels-photo-25273_akvvyg.png");
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+}

@@ -1,0 +1,17 @@
+header.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+header.sidebar-collapsed {
+  padding: 25px;
+  cursor: pointer;
+}
+
+header.sidebar-expanded {
+  width: 10%;
+  background-color: red;
+}
