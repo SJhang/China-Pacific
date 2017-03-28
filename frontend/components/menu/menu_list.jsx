@@ -1,9 +1,10 @@
 import React from 'react';
+import MenuItem from './menu_item';
 
-const MenuList = ({menuList}) => {
+const MenuList = ({menuType}) => {
   return (
-    <div className={menuList}>
-
+    <div className={menuType}>
+      <div></div>
     </div>
   )
 }

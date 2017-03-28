@@ -5,7 +5,7 @@ class Splash extends React.Component {
     return (
       <div className="splash-page">
         <div className="splash-image">
-          <div className="overlay"></div>
+          <div className="splash-overlay"></div>
         </div>
       </div>
     )
