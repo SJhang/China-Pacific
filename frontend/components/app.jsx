@@ -1,15 +1,13 @@
 import React from 'react';
 
 //custom components
-// import Sidebar from './shared/sidebar';
 import Header from './shared/header';
-import Footer from './shared/footer';
+import Sidebar from './shared/sidebar';
 
 const App = ({ children }) => (
   <div className="app">
-    <Header />
+    <Sidebar />
       {children}
-    <Footer />
   </div>
 );
 

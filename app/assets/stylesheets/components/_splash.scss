@@ -1,15 +1,18 @@
 .splash-page {
   z-index: 900;
+  height: 100%;
+  position: absolute;
+  float: right;
+  width: 85%;
+  left: 15%;
 }
 
 .splash-image {
-  min-height: 800px;
   background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/v1490557507/pexels-photo-48726_hajuqh.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;
-  position: relative;
 }
 
 .splash-overlay {
@@ -19,4 +22,11 @@
   left: 0;
   right: 0;
   background: rgba(0,0,0,0.4);
+}
+
+video#bgvid {
+    position: absoulte;
+    min-height: 1em;
+    width: 100%;
+    z-index: -100;
 }

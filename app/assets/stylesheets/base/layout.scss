@@ -113,3 +113,7 @@ hr {
 input[type="search"] {
 	padding: 5px;
 }
+
+:after, :before {
+	box-sizing: border-box;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 
 class Header extends React.Component {
+
+  /* toggle for sidebar
   toggle() {
     $(document).click(e => {
       e.stopPropagation();
@@ -13,16 +15,11 @@ class Header extends React.Component {
       }
     })
   }
-
+  */
   render () {
     return (
       <header className="global-header">
-        <div className="header-wrap collapsed">
-          <a
-            className="menu-button"
-            onClick={() => this.toggle()}>
-            <i className="fa fa-bars fa-3x" aria-hidden="true"></i>
-          </a>
+        <div className="header-wrap">
           <a className="header-logo">
             <img
               src="https://res.cloudinary.com/dsetpdsls/image/upload/c_scale,w_311/v1490328608/china_gate_zdxbsi.png"></img>

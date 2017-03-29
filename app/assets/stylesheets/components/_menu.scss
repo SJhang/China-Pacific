@@ -1,6 +1,13 @@
 .menu-page {
+  position: absolute;
   min-height: 100vh;
-  margin-top: 88px;
+  width: 85%;
+  left: 15%;
+  background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/c_scale,w_2322/v1478634880/ridi5gxhkuvwsaktivh0.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 70%;
 }
 
 .menu-wrap {
@@ -12,7 +19,7 @@
 
   h1.menu-title {
     font-size: 22px;
-    color: black;
+    color: #fff;
     line-height: inherit;
     text-align: center;
     height: 50px;
@@ -86,12 +93,12 @@ div.menu-types > div:hover {
   cursor: pointer;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(50, 186, 182, 0.4s); /* Black w/ opacity */
+  background-color: rgba(50, 186, 182, 1); /* Black w/ opacity */
 
   h3 {
     color: white;
   }
-  
+
   .hours:before {
     width: 100%;
     background: white;
@@ -126,7 +133,7 @@ div.menu-types > div:hover {
   }
 
   .dinner-div {
-    background-color: rgba(0,0,0,0.3s);
+    background-color: #b1ada9;
   }
 }
 

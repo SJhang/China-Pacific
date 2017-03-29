@@ -4,12 +4,19 @@ class Splash extends React.Component {
   render () {
     return (
       <div className="splash-page">
-        <div className="splash-image">
-          <div className="splash-overlay"></div>
-        </div>
+        <video playsInline autoPlay muted loop id="bgvid">
+          <source
+            src="https://res.cloudinary.com/dsetpdsls/video/upload/v1490753846/343379421_myyo4g.mp4"
+            type="video/mp4">
+          </source>
+        </video>
       </div>
     )
   }
 }
+
+// <div className="splash-image">
+//   <div className="overlay"></div>
+// </div>
 
 export default Splash;

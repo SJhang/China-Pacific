@@ -1,0 +1,27 @@
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 280px;
+}
+
+
+.menu-item {
+  .thumbnail {
+    width: 120px;
+    height: 120px;
+  }
+
+  .item-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+}
+
+.item-desc > div {
+  display: flex;
+  align-items: center;
+}
