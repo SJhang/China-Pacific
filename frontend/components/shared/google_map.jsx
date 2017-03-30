@@ -20,7 +20,7 @@ class GoogleMap extends React.Component {
   }
 
   componentDidUpdate() {
-    marker.setMap(this.map);
+    this.marker.setMap(this.map);
   }
 
   render () {

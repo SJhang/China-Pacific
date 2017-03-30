@@ -27,7 +27,7 @@ class Sidebar extends React.Component {
   }
 
   redirectToPress() {
-    // this.props.router.push('/press');
+    this.props.router.push('/press');
   }
 
   yelpLink() {
@@ -48,11 +48,21 @@ class Sidebar extends React.Component {
 
         </div>
         <ul className="sidebar-menu">
-          <li><a className="about" onClick={() => this.redirectToAbout()}>ABOUT</a></li>
-          <li><a className="menu" onClick={() => this.redirectToMenu()}>MENU</a></li>
-          <li><a className="location" onClick={() => this.redirectToLocation()}>LOCATION</a></li>
-          <li><a className="contact" onClick={() => this.redirectToContact()}>CONTACT</a></li>
-          <li><a className="press">PRESS</a></li>
+          <li><a
+            className="about"
+            onClick={() => this.redirectToAbout()}>ABOUT</a></li>
+          <li><a
+            className="menu"
+            onClick={() => this.redirectToMenu()}>MENU</a></li>
+          <li><a
+            className="location"
+            onClick={() => this.redirectToLocation()}>LOCATION</a></li>
+          <li><a
+            className="contact"
+            onClick={() => this.redirectToContact()}>CONTACT</a></li>
+          <li><a
+            className="press"
+            onClick={() => this.redirectToPress()}>PRESS</a></li>
         </ul>
         <div className="sns">
           <a className="instagram">
