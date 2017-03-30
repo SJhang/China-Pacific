@@ -9,7 +9,6 @@ const _mapOptions = {
 
 class GoogleMap extends React.Component {
   componentDidMount() {
-    debugger;
     const map = this.refs.map;
     this.map = new google.maps.Map(map, _mapOptions);
     this.marker = new google.maps.Marker({
