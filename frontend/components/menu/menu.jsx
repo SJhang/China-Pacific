@@ -24,11 +24,10 @@ class Menu extends React.Component {
   render () {
     return (
       <div className="menu-page">
-        <div className="overlay"></div>
         <div className="menu-wrap">
-          <h1 className="menu-title">
-            Choose Menu Type
-          </h1>
+          <div className="menu-title">
+            <h1>MENU TYPE</h1>
+          </div>
           <div className="menu-types">
             <div
               className="lunch-div"

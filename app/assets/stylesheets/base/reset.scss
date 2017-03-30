@@ -70,11 +70,14 @@ input[type="password"],
 input[type="email"],
 input[type="text"],
 input[type="submit"],
+input[type="tel"],
 textarea,
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-weight: 200;
+  font-size: 12px;
 }
 
 button,

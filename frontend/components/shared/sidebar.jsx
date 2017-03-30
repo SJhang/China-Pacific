@@ -23,7 +23,7 @@ class Sidebar extends React.Component {
   }
 
   redirectToContact() {
-    // this.props.router.push('/contact');
+    this.props.router.push('/contact');
   }
 
   redirectToPress() {
@@ -51,7 +51,7 @@ class Sidebar extends React.Component {
           <li><a className="about" onClick={() => this.redirectToAbout()}>ABOUT</a></li>
           <li><a className="menu" onClick={() => this.redirectToMenu()}>MENU</a></li>
           <li><a className="location" onClick={() => this.redirectToLocation()}>LOCATION</a></li>
-          <li><a className="contact">CONTACT</a></li>
+          <li><a className="contact" onClick={() => this.redirectToContact()}>CONTACT</a></li>
           <li><a className="press">PRESS</a></li>
         </ul>
         <div className="sns">
