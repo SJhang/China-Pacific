@@ -19,7 +19,7 @@ class Sidebar extends React.Component {
   }
 
   redirectToLocation() {
-    // this.props.router.push('/location');
+    this.props.router.push('/location');
   }
 
   redirectToContact() {
@@ -30,12 +30,18 @@ class Sidebar extends React.Component {
     // this.props.router.push('/press');
   }
 
+  yelpLink() {
+    window.open('https://www.yelp.com/biz/china-pacific-austin');
+  }
+
+  facebookLink() {
+    window.open('https://www.facebook.com/Chinapacificaustin/?hc_ref=SEARCH');
+  }
   render () {
     return (
       <header className="sidebar">
         <div className="sidebar-logo">
           <a onClick={() => this.redirectToHome()}>
-            <img src="https://res.cloudinary.com/dsetpdsls/image/upload/c_scale,w_311/v1490328608/china_gate_zdxbsi.png"></img>
             <span>China Pacific</span>
             <span>Restaurant</span>
           </a>
@@ -44,7 +50,7 @@ class Sidebar extends React.Component {
         <ul className="sidebar-menu">
           <li><a className="about" onClick={() => this.redirectToAbout()}>ABOUT</a></li>
           <li><a className="menu" onClick={() => this.redirectToMenu()}>MENU</a></li>
-          <li><a className="location">LOCATION</a></li>
+          <li><a className="location" onClick={() => this.redirectToLocation()}>LOCATION</a></li>
           <li><a className="contact">CONTACT</a></li>
           <li><a className="press">PRESS</a></li>
         </ul>
@@ -52,10 +58,14 @@ class Sidebar extends React.Component {
           <a className="instagram">
             <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
           </a>
-          <a className="facebook">
+          <a
+            className="facebook"
+            onClick={() => this.facebookLink()}>
             <i className="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
           </a>
-          <a className="yelp">
+          <a
+            className="yelp"
+            onClick={() => this.yelpLink()}>
             <i className="fa fa-yelp fa-2x" aria-hidden="true"></i>
           </a>
           <a className="google">
