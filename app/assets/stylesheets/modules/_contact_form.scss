@@ -43,8 +43,14 @@
 
     input {
       width: 300px;
-      border: 1px solid black;
+      border: 1px solid #aaa;
       padding: 10px;
+      color: black;
+    }
+
+    input:focus {
+      border: 1px solid black;
+      outline: 0;
     }
 
     textarea {
@@ -52,6 +58,12 @@
       height: 100px;
       padding: 10px;
       font-size: 12px;
+      border: 1px solid #aaa;
+    }
+
+    textarea:focus {
+      border: 1px solid black;
+      outline: 0;
     }
   }
 

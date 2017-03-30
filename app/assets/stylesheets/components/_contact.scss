@@ -39,14 +39,15 @@
 
   .contact-desc {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
+    width: 90%;
   }
 }
 
 .contact-desc {
   .contact-map {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
   }
 }
