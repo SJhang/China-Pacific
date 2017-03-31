@@ -1,0 +1,46 @@
+.lunch-menu {
+  position: absolute;
+  min-height: 100vh;
+  width: 85%;
+  left: 15%;
+}
+
+.lunch-menu {
+  .lunch-wrap {
+    padding: 50px 0 0 0;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.lunch-wrap {
+  .lunch-title {
+    font-family: $roboto;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+
+    h1 {
+      font-family: $roboto-slab;
+      line-height: normal;
+      font-size: 30px;
+      text-align: left;
+    }
+
+    .menu-description {
+
+    }
+  }
+
+  .lunch-menu-list {
+
+  }
+}

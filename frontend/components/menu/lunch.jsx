@@ -9,9 +9,9 @@ class Lunch extends React.Component {
   render () {
     return (
       <div className="lunch-menu">
-        <div className="menu-type-wrap">
-          <div className="lunch-wrap">
-            <h1 className="menu-title">LUNCH SPECIAL</h1>
+        <div className="lunch-wrap">
+          <div className="lunch-title">
+            <h1>LUNCH SPECIAL</h1>
             <ul className="menu-description">
               <li>11 A.M. - 3 P.M.</li>
               <li>Served with a Soup, an Egg Roll, and Fried Rice</li>

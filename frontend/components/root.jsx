@@ -22,9 +22,10 @@ const Root = ({store}) => {
           <IndexRoute component={SplashContainer}/>
           <Route path='about' component={About}/>
           <Route path='menu' component={MenuContainer}>
-            <Route path='menu/lunch' component={LunchContainer}></Route>
-            <Route path='menu/sunset' component={SunsetContainer}></Route>
-            <Route path='menu/dinner' component={DinnerContainer}></Route>
+            <IndexRoute component={DinnerContainer} />
+            <Route path='lunch' component={LunchContainer}></Route>
+            <Route path='sunset' component={SunsetContainer}></Route>
+            <Route path='dinner' component={DinnerContainer}></Route>
           </Route>
           <Route path='location' component={Location} />
           <Route path='contact' component={Contact} />

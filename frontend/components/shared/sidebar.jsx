@@ -152,13 +152,13 @@ class Sidebar extends React.Component {
             onClick={() => this.yelpLink()}>
             <i className="fa fa-yelp fa-2x" aria-hidden="true"></i>
           </a>
-          <a className="google">
-            <i className="fa fa-google fa-2x" aria-hidden="true"></i>
-          </a>
         </div>
       </header>
     )
   }
 }
+// <a className="google">
+//   <i className="fa fa-google fa-2x" aria-hidden="true"></i>
+// </a>
 
 export default withRouter(Sidebar);
