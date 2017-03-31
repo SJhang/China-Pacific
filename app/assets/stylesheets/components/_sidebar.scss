@@ -50,8 +50,11 @@ header.sidebar {
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
+  font-family: $roboto;
+  font-weight: 300;
+  font-size: 14px;
 
-  li {
+  div {
     width: 100%;
     height: 50px;
     color: #aaa;
@@ -61,6 +64,13 @@ header.sidebar {
     padding: 0;
     border-top: 1px solid #272727;
     position: relative;
+  }
+
+  span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
 
     a {
       padding: 1.2em 2em 1em 0;
@@ -68,7 +78,7 @@ header.sidebar {
       cursor: pointer;
       width: 100%;
       height: 100%;
-      display: block;
+      display: inline-block;
       position: relative;
       z-index: 5;
       color: #aaa;
@@ -76,26 +86,52 @@ header.sidebar {
       text-transform: uppercase;
       -webkit-transition: all .15s;
       transition: all .15s;
+      box-sizing: border-box;
     }
-  }
-
-  li:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    z-index: 1;
-    transition: all .3s;
   }
 }
 
-.sidebar-menu {
-  li:hover {
-    opacity: .5;
+.sidebar-menu > div {
+  span:before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
     background-color: #2a2a2a;
-    transition: all .3s;
+    transition: all 0.3s;
+  }
+
+  span:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    transition: all 0.3s cubic-bezier(.165,.84,.44,1);
+    opacity: 0.5;
+  }
+}
+
+.sidebar-menu > div:hover {
+  a {
+    color: white;
+  }
+
+  span:before {
+    width: 100%;
+    background-color: #2a2a2a;
+    transition: width .3s cubic-bezier(.165,.84,.44,1);
+  }
+
+  span:after {
+    width: 100%;
+    background-color: transparent;
+    transition: all 0s cubic-bezier(.165,.84,.44,1);
   }
 }
 
@@ -112,4 +148,15 @@ header.sidebar {
   a {
     text-decoration: none;
   }
+
+  a:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+}
+
+.sidebar-active {
+  border-left: 3px solid #0cf;
+  background-color: #272727;
+  color: white;
 }

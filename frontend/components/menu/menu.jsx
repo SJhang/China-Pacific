@@ -21,12 +21,20 @@ class Menu extends React.Component {
     this.props.router.push('/menu/dinner');
   }
 
+  openPdf () {
+    window.open("assets/menu.pdf");
+  };
+
   render () {
     return (
       <div className="menu-page">
         <div className="menu-wrap">
           <div className="menu-title">
             <h1>MENU TYPE</h1>
+            <i
+              className="fa fa-file-pdf-o fa-2x"
+              aria-hidden="true"
+              onClick={() => this.openPdf()}></i>
           </div>
           <div className="menu-types">
             <div

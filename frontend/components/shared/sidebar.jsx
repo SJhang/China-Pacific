@@ -6,28 +6,67 @@ class Sidebar extends React.Component {
     super(props);
   }
 
-  redirectToHome() {
-    this.props.router.push('/');
+  componentWillMount() {
+    // if (this.props.router.location.pathname == "/about") debugger;
+  }
+  componentDidMount () {
+    // if (this.props.router.location.pathname == "/about") debugger;
   }
 
-  redirectToAbout() {
-    this.props.router.push('/about');
+  componentWillUpdate() {
+    // if (this.props.router.location.pathname == "/about") debugger;
+  }
+  //
+  componentDidUpdate() {
+    // let parentDOM = document.getElementById('sidebar-options')
+    // let activatedMenu = parentDOM.getElementsByClassName("sidebar-active");
+    // let updatingPage = this.props.router.location.pathname.slice(1);
+    // if (activatedMenu.length && activatedMenu[0].id !== updatingPage) {
+    //   for (var i = 0; i < activatedMenu.length; i++) {
+    //     $(activatedMenu[i]).removeClass("sidebar-active");
+    //   }
+    // }
   }
 
-  redirectToMenu() {
-    this.props.router.push('/menu');
+  redirectToHome(e) {
+    if (this.props.router.location.pathname !== '/') {
+      this.props.router.push('/');
+    }
   }
 
-  redirectToLocation() {
-    this.props.router.push('/location');
+  redirectToAbout(e) {
+    if (this.props.router.location.pathname !== '/about') {
+      // this.toggleActive(e);
+      this.props.router.push('/about');
+    }
   }
 
-  redirectToContact() {
-    this.props.router.push('/contact');
+  redirectToMenu(e) {
+    if (this.props.router.location.pathname !== '/menu') {
+      // this.toggleActive(e);
+      this.props.router.push('/menu');
+    }
   }
 
-  redirectToPress() {
-    this.props.router.push('/press');
+  redirectToLocation(e) {
+    if (this.props.router.location.pathname !== '/location') {
+      // this.toggleActive(e);
+      this.props.router.push('/location');
+    }
+  }
+
+  redirectToContact(e) {
+    if (this.props.router.location.pathname !== '/contact') {
+      // this.toggleActive(e);
+      this.props.router.push('/contact');
+    }
+  }
+
+  redirectToPress(e) {
+    if (this.props.router.location.pathname !== '/press') {
+      // this.toggleActive(e);
+      this.props.router.push('/press');
+    }
   }
 
   yelpLink() {
@@ -37,33 +76,68 @@ class Sidebar extends React.Component {
   facebookLink() {
     window.open('https://www.facebook.com/Chinapacificaustin/?hc_ref=SEARCH');
   }
+
+  toggleActive (e) {
+    $(e.target).addClass("sidebar-active");
+  }
+
   render () {
     return (
       <header className="sidebar">
         <div className="sidebar-logo">
-          <a onClick={() => this.redirectToHome()}>
+          <a onClick={(e) => this.redirectToHome(e)}>
             <span>China Pacific</span>
             <span>Restaurant</span>
           </a>
 
         </div>
-        <ul className="sidebar-menu">
-          <li><a
-            className="about"
-            onClick={() => this.redirectToAbout()}>ABOUT</a></li>
-          <li><a
-            className="menu"
-            onClick={() => this.redirectToMenu()}>MENU</a></li>
-          <li><a
-            className="location"
-            onClick={() => this.redirectToLocation()}>LOCATION</a></li>
-          <li><a
-            className="contact"
-            onClick={() => this.redirectToContact()}>CONTACT</a></li>
-          <li><a
-            className="press"
-            onClick={() => this.redirectToPress()}>PRESS</a></li>
-        </ul>
+        <div className="sidebar-menu" id="sidebar-options">
+          <div>
+            <span>
+              <a
+                className="about"
+                id="about"
+                onClick={(e) => this.redirectToAbout(e)}>ABOUT
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                className="menu"
+                id="menu"
+                onClick={(e) => this.redirectToMenu(e)}>MENU
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                className="location"
+                id="location"
+                onClick={(e) => this.redirectToLocation(e)}>LOCATION
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                className="contact"
+                id="contact"
+                onClick={(e) => this.redirectToContact(e)}>CONTACT
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                className="press"
+                id="press"
+                onClick={(e) => this.redirectToPress(e)}>PRESS
+              </a>
+            </span>
+          </div>
+        </div>
         <div className="sns">
           <a className="instagram">
             <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
