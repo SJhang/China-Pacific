@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class Dinner extends React.Component {
   constructor(props) {
@@ -18,4 +19,4 @@ class Dinner extends React.Component {
   }
 }
 
-export default Dinner;
+export default withRouter(Dinner);

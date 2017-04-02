@@ -1,70 +1,55 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import SessionButtonContainer from '../session/session_button_container';
 
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentWillMount() {
-    // if (this.props.router.location.pathname == "/about") debugger;
-  }
-  componentDidMount () {
-    // if (this.props.router.location.pathname == "/about") debugger;
-  }
-
-  componentWillUpdate() {
-    // if (this.props.router.location.pathname == "/about") debugger;
-  }
-  //
-  componentDidUpdate() {
-    // let parentDOM = document.getElementById('sidebar-options')
-    // let activatedMenu = parentDOM.getElementsByClassName("sidebar-active");
-    // let updatingPage = this.props.router.location.pathname.slice(1);
-    // if (activatedMenu.length && activatedMenu[0].id !== updatingPage) {
-    //   for (var i = 0; i < activatedMenu.length; i++) {
-    //     $(activatedMenu[i]).removeClass("sidebar-active");
-    //   }
-    // }
-  }
-
   redirectToHome(e) {
     if (this.props.router.location.pathname !== '/') {
+      this.toggleDeactive();
       this.props.router.push('/');
     }
   }
 
   redirectToAbout(e) {
     if (this.props.router.location.pathname !== '/about') {
-      // this.toggleActive(e);
+      this.toggleDeactive();
+      this.toggleActive(e);
       this.props.router.push('/about');
     }
   }
 
   redirectToMenu(e) {
     if (this.props.router.location.pathname !== '/menu') {
-      // this.toggleActive(e);
+      this.toggleDeactive();
+      this.toggleActive(e);
       this.props.router.push('/menu');
     }
   }
 
   redirectToLocation(e) {
     if (this.props.router.location.pathname !== '/location') {
-      // this.toggleActive(e);
+      this.toggleDeactive();
+      this.toggleActive(e);
       this.props.router.push('/location');
     }
   }
 
   redirectToContact(e) {
     if (this.props.router.location.pathname !== '/contact') {
-      // this.toggleActive(e);
+      this.toggleDeactive();
+      this.toggleActive(e);
       this.props.router.push('/contact');
     }
   }
 
   redirectToPress(e) {
     if (this.props.router.location.pathname !== '/press') {
-      // this.toggleActive(e);
+      this.toggleDeactive();
+      this.toggleActive(e);
       this.props.router.push('/press');
     }
   }
@@ -79,6 +64,17 @@ class Sidebar extends React.Component {
 
   toggleActive (e) {
     $(e.target).addClass("sidebar-active");
+  }
+
+  toggleDeactive () {
+    let parentDOM = document.getElementById('sidebar-options')
+    let activatedMenu = parentDOM.getElementsByClassName("sidebar-active");
+
+    if (activatedMenu.length) {
+      for (var i = 0; i < activatedMenu.length; i++) {
+        $(activatedMenu[i]).removeClass("sidebar-active");
+      }
+    }
   }
 
   render () {
@@ -153,6 +149,7 @@ class Sidebar extends React.Component {
             <i className="fa fa-yelp fa-2x" aria-hidden="true"></i>
           </a>
         </div>
+        <SessionButtonContainer />
       </header>
     )
   }

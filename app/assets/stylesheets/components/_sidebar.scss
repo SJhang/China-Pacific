@@ -12,10 +12,13 @@ header.sidebar {
   justify-content: flex-start;
   align-items: center;
   background-color: #212121;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
+
+  div:nth-child(3) {
+    margin-top: auto;
+  }
 
   div:last-child {
-    margin-top: auto;
   }
 }
 
@@ -34,10 +37,6 @@ header.sidebar {
     align-items: center;
     text-decoration: none;
     line-height: 1.2;
-
-    img {
-      width: 40px;
-    }
   }
 
   span:last-child {
@@ -68,7 +67,7 @@ header.sidebar {
   div:last-child {
     border-bottom: 1px solid #272727;
   }
-  
+
   span {
     width: 100%;
     height: 100%;
@@ -160,5 +159,5 @@ header.sidebar {
 .sidebar-active {
   border-left: 3px solid #0cf;
   background-color: #272727;
-  color: white;
+  color: white !important;
 }

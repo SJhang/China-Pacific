@@ -1,6 +1,14 @@
 import React from 'react';
 
 class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  redirectToLogin() {
+    this.props.router.push('login');
+  }
+
   render () {
     return (
       <div className="splash-page">

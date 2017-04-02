@@ -1,0 +1,41 @@
+.session-button {
+  padding: 10px;
+  color: #aaa;
+  cursor: pointer;
+  text-align: right;
+
+  a {
+    text-decoration: none;
+    height: 30px;
+    height: 100%;
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.react-modal {
+  margin: 120px auto;
+  height: 240px;
+  width: 300px;
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: #424244;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px 20px;
+  z-index: 100;
+}
+
+.react-modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}

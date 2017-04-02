@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import MenuItem from './menu_item';
 
 class Lunch extends React.Component {
@@ -31,4 +32,4 @@ class Lunch extends React.Component {
   }
 }
 
-export default Lunch;
+export default withRouter(Lunch);

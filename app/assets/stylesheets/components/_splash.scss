@@ -7,14 +7,6 @@
   left: 15%;
 }
 
-.splash-image {
-  background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/v1490557507/pexels-photo-48726_hajuqh.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 100%;
-}
-
 .splash-overlay {
   position: absolute;
   top: 0;
@@ -25,8 +17,12 @@
 }
 
 video#bgvid {
-    position: absoulte;
+    position: absolute;
     min-height: 1em;
     width: 100%;
     z-index: -100;
+}
+
+.splash-page {
+
 }

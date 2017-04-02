@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class Sunset extends React.Component {
   constructor(props) {
@@ -17,4 +18,4 @@ class Sunset extends React.Component {
   }
 }
 
-export default Sunset;
+export default withRouter(Sunset);
