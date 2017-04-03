@@ -8,7 +8,7 @@ const Contact = (props) => {
     <div className="contact-page">
       <div className="contact-wrap">
         <div className="contact-title">
-          <h1>CONTACT</h1>
+          <h1>Contact</h1>
         </div>
         <div className="contact-desc">
           <ContactForm />

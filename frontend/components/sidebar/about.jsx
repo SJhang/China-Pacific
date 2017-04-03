@@ -5,7 +5,7 @@ const About = (props) => {
     <div className="about-page">
       <div className="about-wrap">
         <div className="about-title">
-          <h1>ABOUT US</h1>
+          <h1>About</h1>
           <div className="about-location">Lakeway, TX</div>
         </div>
         <div className="about-desc">

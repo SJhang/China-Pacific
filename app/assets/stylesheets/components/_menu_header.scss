@@ -1,0 +1,35 @@
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 45px 0 45px 15%;
+}
+
+.menu-header {
+  .menu-header-wrap {
+    vertical-align: center;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.menu-header-wrap {
+  div {
+    font-family: $roboto;
+    font-weight: 300;
+    color: #757575;
+    font-size: 21px;
+  }
+}
+
+.menu-header-wrap > div {
+  a {
+    text-decoration: none;
+  }
+}

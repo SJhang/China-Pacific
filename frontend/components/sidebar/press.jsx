@@ -5,7 +5,7 @@ const Press = (props) => {
     <div className="press-page">
       <div className="press-wrap">
         <div className="press-title">
-          <h1>PRESS</h1>
+          <h1>Press</h1>
         </div>
         <div className="press-desc">
           <div className="press1">place holder 1</div>

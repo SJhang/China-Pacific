@@ -5,14 +5,14 @@ const Location = (props) => {
     <div className="location-page">
       <div className="location-wrap">
         <div className="location-title">
-          <h1>LOCATION</h1>
+          <h1>Location</h1>
         </div>
         <div className="location-image">
           <div className="overlay"></div>
         </div>
         <div className="location-desc">
           <div className="location-specifics">
-            <div className="physical-address">
+            <div className="physical-address animated zoomIn">
               <i className="fa fa-map-marker fa-4x" aria-hidden="true"></i>
               <p>
                 Liberty Center<br/>
@@ -20,13 +20,13 @@ const Location = (props) => {
                 Lakeway, TX 78734
               </p>
             </div>
-            <div className="phone-number">
+            <div className="phone-number animated zoomIn">
               <i className="fa fa-phone fa-4x" aria-hidden="true"></i>
               <p>
                 <a href="tel:512-266-9328">512 266 - 9328</a>
               </p>
             </div>
-            <div className="open-hours">
+            <div className="open-hours animated zoomIn">
               <i className="fa fa-clock-o fa-4x" aria-hidden="true"></i>
               <p>
                 Hours of Operation<br/>
@@ -35,7 +35,7 @@ const Location = (props) => {
                 Sat  & Sun : 11:30AM – 10:00PM<br/>
               </p>
             </div>
-            <div className="appointments">
+            <div className="appointments animated zoomIn">
               <i className="fa fa-cutlery fa-4x" aria-hidden="true"></i>
               <p>
                 Party Room Available<br/>

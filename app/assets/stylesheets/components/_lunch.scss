@@ -1,8 +1,7 @@
 .lunch-menu {
   position: absolute;
   min-height: 100vh;
-  width: 85%;
-  left: 15%;
+  width: 100%;
 }
 
 .lunch-menu {
@@ -19,10 +18,21 @@
 }
 
 .lunch-wrap {
+  .paths {
+    height: 30px;
+
+    span {
+      color: black;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+
   .lunch-title {
     font-family: $roboto;
     font-weight: 700;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
@@ -33,10 +43,15 @@
       line-height: normal;
       font-size: 30px;
       text-align: left;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #aaa;
     }
 
     .menu-description {
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 

@@ -3,10 +3,10 @@ import React from 'react';
 //custom components
 import Sidebar from './shared/sidebar';
 
-const App = ({ children }) => (
+const App = (props) => (
   <div className="app">
-    <Sidebar />
-      {children}
+    <Sidebar location={props.location}/>
+    {props.children}
   </div>
 );
 

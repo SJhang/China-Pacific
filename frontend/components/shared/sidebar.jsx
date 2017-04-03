@@ -7,6 +7,10 @@ class Sidebar extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+
+  }
+
   redirectToHome(e) {
     if (this.props.router.location.pathname !== '/') {
       this.toggleDeactive();

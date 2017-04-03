@@ -5,7 +5,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 
 export const login = user => {
-  debugger;
+  
   return {
   type: LOGIN,
   user

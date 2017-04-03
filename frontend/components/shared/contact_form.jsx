@@ -14,7 +14,7 @@ class ContactForm extends React.Component {
 
   handleChange(e) {
     const name = e.target.name;
-    debugger;
+    
     this.setState({[name]: e.target.value})
   }
 
@@ -75,7 +75,8 @@ class ContactForm extends React.Component {
             className="form-submit"
             type="submit"
             value="Submit"
-            onSubmit={e => this.handleSubmit(e)}>Submit</button>
+            onSubmit={e => this.handleSubmit(e)}
+            tabIndex="5">Submit</button>
         </form>
       </div>
     )

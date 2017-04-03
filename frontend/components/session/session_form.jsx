@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit (e) {
-    debugger;
+    
     e.preventDefault();
     const user = this.state;
     this.props.login(user);
@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
         isOpen={this.props.open}
         onRequestClose={() => this.props.closeModal()}
         contentLabel="Modal"
-        className={`react-modal center-block animated fadeInDownBig`}
+        className={`react-modal center-block animated fadeInUpBig`}
         overlayClassName='react-modal-overlay'
       >
         <div className="admin-auth">

@@ -5,6 +5,18 @@ import MenuItem from './menu_item';
 class Lunch extends React.Component {
   constructor(props) {
     super(props);
+
+    this.renderPaths = this.renderPaths.bind(this);
+  }
+  componentWillMount() {
+  }
+
+  renderPaths() {
+    this.props.routes.map((el, idx) => {
+      if (el.path !== '/') {
+        return (<span key={idx}>{el.path}</span>);
+      }
+    });
   }
 
   render () {

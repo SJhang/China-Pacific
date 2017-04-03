@@ -45,7 +45,7 @@
 
 }
 .location-image {
-  width: 100%;
+  width: 1040px;
   height: 200px;
   background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/c_scale,w_1994,y_0/v1490835416/pexels-photo-212088_fdxlxf.png");
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 80%;
 
