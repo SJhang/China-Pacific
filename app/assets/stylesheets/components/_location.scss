@@ -3,11 +3,11 @@
   min-height: 100vh;
   width: 85%;
   left: 15%;
+  margin-top: 50px;
 }
 
 .location-page {
   .location-wrap {
-    padding: 50px 0 0 0;
     width: 85%;
     margin: 0 auto;
     display: flex;
@@ -95,7 +95,7 @@
       height: 120px;
       font-family: $roboto;
       font-size: 16px;
-      font-weight: 200;
+      font-weight: 100;
       line-height: 1.6;
     }
   }

@@ -12,6 +12,7 @@ import SunsetContainer from './menu/sunset_container';
 import DinnerContainer from './menu/dinner_container';
 import Sides from './menu/sides';
 import Chef from './menu/chef';
+import MenuSplash from './menu/menu_splash';
 
 import About from './sidebar/about';
 import Location from './sidebar/location';
@@ -23,6 +24,12 @@ const Root = ({store}) => {
     //dispatch fetch all menues
   };
 
+  const _scrollTop = (nextState) => {
+    if (nextState.location.action === "PUSH") {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -30,12 +37,12 @@ const Root = ({store}) => {
           <IndexRoute component={SplashContainer}/>
           <Route path='about' component={About}/>
           <Route path='menu' component={MenuContainer}>
-            <IndexRoute />
-            <Route path='sides' component={Sides}></Route>
-            <Route path='lunch' component={LunchContainer}></Route>
-            <Route path='sunset' component={SunsetContainer}></Route>
-            <Route path='dinner' component={DinnerContainer}></Route>
-            <Route path='chef' component={Chef}></Route>
+            <IndexRoute component={MenuSplash}/>
+            <Route path='sides' component={Sides} onEnter={_scrollTop}></Route>
+            <Route path='lunch' component={LunchContainer} onEnter={_scrollTop}></Route>
+            <Route path='sunset' component={SunsetContainer} onEnter={_scrollTop}></Route>
+            <Route path='dinner' component={DinnerContainer} onEnter={_scrollTop}></Route>
+            <Route path='chef' component={Chef} onEnter={_scrollTop}></Route>
           </Route>
           <Route path='location' component={Location} />
           <Route path='contact' component={Contact} />

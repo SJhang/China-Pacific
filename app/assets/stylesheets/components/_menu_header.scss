@@ -4,6 +4,8 @@
   left: 0;
   right: 0;
   padding: 45px 0 45px 15%;
+  z-index: 900;
+  background: white;
 }
 
 .menu-header {
@@ -31,5 +33,22 @@
 .menu-header-wrap > div {
   a {
     text-decoration: none;
+  }
+}
+
+.header-active {
+  color: #ec3524;
+}
+
+.smaller {
+  padding: 8px 0 8px 15%;
+  transition: all .5s ease;
+
+  div {
+
+    div {
+      font-size: 16px;
+      transition: all .5s ease;
+    }
   }
 }

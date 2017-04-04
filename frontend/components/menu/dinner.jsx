@@ -8,11 +8,15 @@ class Dinner extends React.Component {
 
   render () {
     return (
-      <div className="dinner-menu">
-        <div className="menu-type-wrap">
-          <h1 className="menu-title"></h1>
-          <p className="menu-description"></p>
-
+      <div
+        className="dinner-container"
+        id="dinner"
+        onScroll={(e) => handleScroll(e)}>
+        <div className="dinner-wrapper">
+          <div className="dinner-headline">
+            <h1>Dinner</h1>
+          </div>
+          <div className="dinner-list"></div>
         </div>
       </div>
     )

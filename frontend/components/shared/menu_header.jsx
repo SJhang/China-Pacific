@@ -7,9 +7,9 @@ const MenuHeader = (props) => {
   };
 
   return (
-    <header className="menu-header">
+    <header className="menu-header" id="header">
       <div className="menu-header-wrap">
-        <div className="sides">
+        <div className="sides animated pulse">
           <IndexLink
             to={location("sides")}
             activeClassName="header-active"
@@ -17,7 +17,7 @@ const MenuHeader = (props) => {
             Sides
           </IndexLink>
         </div>
-        <div className="lunch">
+        <div className="lunch animated pulse">
           <Link
             to={location("lunch")}
             activeClassName="header-active"
@@ -25,7 +25,7 @@ const MenuHeader = (props) => {
             Lunch
           </Link>
         </div>
-        <div className="sunset">
+        <div className="sunset animated pulse">
           <Link
             to={location("sunset")}
             activeClassName="header-active"
@@ -33,7 +33,7 @@ const MenuHeader = (props) => {
             Sunset
           </Link>
         </div>
-        <div className="dinner">
+        <div className="dinner animated pulse">
           <Link
             to={location("dinner")}
             activeClassName="header-active"
@@ -41,7 +41,7 @@ const MenuHeader = (props) => {
             Dinner
           </Link>
         </div>
-        <div className="chef">
+        <div className="chef animated pulse">
           <Link
             to={location("chef")}
             activeClassName="header-active"
