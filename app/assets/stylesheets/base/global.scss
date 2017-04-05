@@ -1,4 +1,12 @@
+$gray: #aaa;
+$grayfont: #757575;
+
 $sans-serif: arial, helvetica, sans-serif;
 $serif: georgia, "times new roman", times, serif;
 $roboto-slab: 'Roboto Slab', serif;
 $roboto: 'Roboto', sans-serif;
+
+.body-wrap {
+  position: relative;
+  min-height: 100vh;
+}

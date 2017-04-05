@@ -1,10 +1,5 @@
 .splash-page {
-  z-index: 900;
-  height: 100%;
-  position: absolute;
-  float: right;
-  width: 85%;
-  left: 15%;
+  width: 100%;
 }
 
 .splash-overlay {
@@ -17,12 +12,6 @@
 }
 
 video#bgvid {
-    position: absolute;
-    min-height: 1em;
-    width: 1224px;
-    z-index: -100;
-}
-
-.splash-page {
-
+  width: 100%;
+  z-index: -100;
 }

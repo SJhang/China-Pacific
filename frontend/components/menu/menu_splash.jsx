@@ -26,8 +26,8 @@ const MenuSplash = (props) => {
   };
 
   return (
-    <div className="menu-container" id="menu-div">
-      <div className="menu-wrapper">
+    <div className="menu-splash" id="menu-div">
+      <div className="menu-wrap">
         <div className="menu-headline">
           <h1>Menu</h1>
           <i
