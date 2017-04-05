@@ -4,8 +4,8 @@
 @import "base/reset.scss";
 
 // Core
-@import "base/color.scss";
-@import "base/fonts.scss";
+@import "base/variables.scss";
+@import "base/mixins.scss";
 @import "base/layout.scss";
 
 // Components
