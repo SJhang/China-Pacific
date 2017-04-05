@@ -83,15 +83,14 @@ class Sidebar extends React.Component {
 
   render () {
     return (
-      <header className="sidebar">
-        <div className="sidebar-logo">
+      <div className={`${this.props.className} list-group panel`}>
+        <div className="list-group-item collapsed sidebar-logo" data-parent="#sidebar">
           <a onClick={(e) => this.redirectToHome(e)}>
             <span>China Pacific</span>
             <span>Restaurant</span>
           </a>
-
         </div>
-        <div className="sidebar-menu" id="sidebar-options">
+        <div className="list-group-item collapsed sidebar-menu" data-parent="#sidebar" id="sidebar-options">
           <div>
             <span>
               <a
@@ -138,7 +137,7 @@ class Sidebar extends React.Component {
             </span>
           </div>
         </div>
-        <div className="sns">
+        <div className="list-group-item collapsed sns" data-parent="#sidebar">
           <a className="instagram">
             <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
           </a>
@@ -154,7 +153,7 @@ class Sidebar extends React.Component {
           </a>
         </div>
         <SessionButtonContainer />
-      </header>
+      </div>
     )
   }
 }

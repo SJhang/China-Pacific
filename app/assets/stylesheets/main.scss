@@ -1,12 +1,13 @@
-@charset "UTF-8";
-
-// CSS Reset
-@import "base/reset.scss";
+@import "bootstrap";
+//
+// // CSS Reset
+// @import "base/reset.scss";
 
 // Core
-@import "base/color.scss";
+@import "base/global.scss";
 @import "base/fonts.scss";
-@import "base/layout.scss";
+// @import "base/color.scss";
+// @import "base/layout.scss";
 
 // Components
 @import "components/*";
