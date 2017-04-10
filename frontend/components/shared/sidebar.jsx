@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
 
   redirectToAbout(e) {
     if (this.props.router.location.pathname !== '/about') {
-      this.toggleDeactive();
+      this.toggleDeactive(e);
       this.toggleActive(e);
       this.props.router.push('/about');
     }
@@ -28,7 +28,7 @@ class Sidebar extends React.Component {
 
   redirectToMenu(e) {
     if (this.props.router.location.pathname !== '/menu') {
-      this.toggleDeactive();
+      this.toggleDeactive(e);
       this.toggleActive(e);
       this.props.router.push('/menu');
     }
@@ -36,7 +36,7 @@ class Sidebar extends React.Component {
 
   redirectToLocation(e) {
     if (this.props.router.location.pathname !== '/location') {
-      this.toggleDeactive();
+      this.toggleDeactive(e);
       this.toggleActive(e);
       this.props.router.push('/location');
     }
@@ -44,7 +44,7 @@ class Sidebar extends React.Component {
 
   redirectToContact(e) {
     if (this.props.router.location.pathname !== '/contact') {
-      this.toggleDeactive();
+      this.toggleDeactive(e);
       this.toggleActive(e);
       this.props.router.push('/contact');
     }
@@ -52,7 +52,7 @@ class Sidebar extends React.Component {
 
   redirectToPress(e) {
     if (this.props.router.location.pathname !== '/press') {
-      this.toggleDeactive();
+      this.toggleDeactive(e);
       this.toggleActive(e);
       this.props.router.push('/press');
     }
@@ -67,94 +67,94 @@ class Sidebar extends React.Component {
   }
 
   toggleActive (e) {
-    $(e.target).addClass("sidebar-active");
+    $(e.target.parentNode).addClass("menu-active");
   }
 
-  toggleDeactive () {
-    let parentDOM = document.getElementById('sidebar-options')
-    let activatedMenu = parentDOM.getElementsByClassName("sidebar-active");
+  toggleDeactive (e) {
+    let parentDOM = document.getElementsByClassName("menu-active");
 
-    if (activatedMenu.length) {
-      for (var i = 0; i < activatedMenu.length; i++) {
-        $(activatedMenu[i]).removeClass("sidebar-active");
+    if (parentDOM.length) {
+      for (var i = 0; i < parentDOM.length; i++) {
+        $(parentDOM[i]).removeClass("menu-active");
       }
     }
   }
 
   render () {
     return (
-      <div className={`${this.props.className} list-group panel`}>
-        <div className="list-group-item collapsed sidebar-logo" data-parent="#sidebar">
+      <ul id="sidebar">
+        <li
+          className="sidebar-logo"
+          data-parent="#sidebar">
           <a onClick={(e) => this.redirectToHome(e)}>
+            <i className="material-icons">home</i>
             <span>China Pacific</span>
             <span>Restaurant</span>
           </a>
-        </div>
-        <div className="list-group-item collapsed sidebar-menu" data-parent="#sidebar" id="sidebar-options">
-          <div>
-            <span>
-              <a
-                className="about"
-                id="about"
-                onClick={(e) => this.redirectToAbout(e)}>ABOUT
-              </a>
-            </span>
-          </div>
-          <div>
-            <span>
-              <a
-                className="menu"
-                id="menu"
-                onClick={(e) => this.redirectToMenu(e)}>MENU
-              </a>
-            </span>
-          </div>
-          <div>
-            <span>
-              <a
-                className="location"
-                id="location"
-                onClick={(e) => this.redirectToLocation(e)}>LOCATION
-              </a>
-            </span>
-          </div>
-          <div>
-            <span>
-              <a
-                className="contact"
-                id="contact"
-                onClick={(e) => this.redirectToContact(e)}>CONTACT
-              </a>
-            </span>
-          </div>
-          <div>
-            <span>
-              <a
-                className="press"
-                id="press"
-                onClick={(e) => this.redirectToPress(e)}>PRESS
-              </a>
-            </span>
-          </div>
-        </div>
-        <div className="list-group-item collapsed sns" data-parent="#sidebar">
+        </li>
+        <li id="menu-list-item">
+          <a
+            className="about"
+            id="list-item"
+            onClick={(e) => this.redirectToAbout(e)}>
+            <i className="material-icons">store_mall_directory</i>
+            <span>ABOUT</span>
+          </a>
+        </li>
+        <li id="menu-list-item">
+          <a
+            className="menu"
+            id="list-item"
+            onClick={(e) => this.redirectToMenu(e)}>
+            <i className="material-icons">restaurant_menu</i>
+            <span>MENU</span>
+          </a>
+        </li>
+        <li id="menu-list-item">
+          <a
+            className="location"
+            id="list-item"
+            onClick={(e) => this.redirectToLocation(e)}>
+            <i className="material-icons">place</i>
+            <span>LOCATION</span>
+          </a>
+        </li>
+        <li id="menu-list-item">
+          <a
+            className="contact"
+            id="list-item"
+            onClick={(e) => this.redirectToContact(e)}>
+            <i className="material-icons">contacts</i>
+            <span>CONTACT</span>
+          </a>
+        </li>
+        <li id="menu-list-item">
+          <a
+            className="press"
+            id="list-item"
+            onClick={(e) => this.redirectToPress(e)}>
+            <i className="material-icons">message</i>
+            <span>PRESS</span>
+          </a>
+        </li>
+        <li className="sns" data-parent="#sidebar">
           <a className="instagram">
-            <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-instagram fa-1x" aria-hidden="true"></i>
           </a>
           <a
             className="facebook"
             onClick={() => this.facebookLink()}>
-            <i className="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-facebook-official fa-1x" aria-hidden="true"></i>
           </a>
           <a
             className="yelp"
             onClick={() => this.yelpLink()}>
-            <i className="fa fa-yelp fa-2x" aria-hidden="true"></i>
+            <i className="fa fa-yelp fa-1x" aria-hidden="true"></i>
           </a>
-        </div>
+        </li>
         <SessionButtonContainer />
-      </div>
-    )
+      </ul>
+    );
   }
 }
 // <a className="google">

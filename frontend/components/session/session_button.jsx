@@ -13,7 +13,7 @@ class SessionButton extends React.Component {
 
   toggleModal (action) {
     this.props.toggleModal();
-    this.setState({ action })
+    this.setState({ action });
   }
 
   logout () {
@@ -23,7 +23,7 @@ class SessionButton extends React.Component {
   render () {
     if (this.props.loggedIn) {
       return (
-        <div className={`session-button ${this.props.className}`}>
+        <div className={`session-button`}>
           <a
             className="logout"
             onClick={() => this.logout()}
@@ -31,12 +31,12 @@ class SessionButton extends React.Component {
             Log Out
           </a>
         </div>
-      )
+      );
     } else {
       return (
-        <div className={`session-button ${this.props.className}`}>
+        <div className={`session-button`}>
           <a
-            className="adminLogin"
+            className="admin-login"
             onClick={() => this.toggleModal("login")}
             >
             Admin
@@ -45,7 +45,7 @@ class SessionButton extends React.Component {
             closeModal={() => this.toggleModal()}
             settings={this.state}/>
         </div>
-      )
+      );
     }
   }
 }

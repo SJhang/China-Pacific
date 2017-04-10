@@ -22,7 +22,7 @@ const About = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default About;

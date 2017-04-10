@@ -1,0 +1,18 @@
+$large-screen: 1140px;
+$touch-pad-screen: 768px;
+$phone-screen: 540px;
+
+@mixin respond-to($media) {
+  @if $media == phone-screen {
+    @media only screen and (max-width: $phone-screen) { @content; }
+  }
+  @else if $media == small-screen {
+    @media only screen and (min-width: $phone-screen + 1) and (max-width: $touch-pad-screen) { @content; }
+  }
+  @else if $media == medium-screen {
+    @media only screen and (min-width: $touch-pad-screen + 1) and (max-width: $large-screen){ @content; }
+  }
+  @else if $media == large-screen {
+    @media only screen and (min-width: $large-screen + 1) { @content; }
+  }
+}

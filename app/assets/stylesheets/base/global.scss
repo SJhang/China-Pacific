@@ -6,7 +6,100 @@ $serif: georgia, "times new roman", times, serif;
 $roboto-slab: 'Roboto Slab', serif;
 $roboto: 'Roboto', sans-serif;
 
-.body-wrap {
-  position: relative;
+body {
+  overflow-x: hidden;
+}
+
+#outer-wrap {
+  min-width: 100vw;
   min-height: 100vh;
+  position: relative;
+  padding-left: 0;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+
+  &.toggled {
+  }
+
+  &.toggled #page-content-wrap {
+    position: absolute;
+  }
+
+  &.toggled #sidebar {
+  }
+
+  &.toggled #main {
+    pointer-events: none;
+
+  }
+
+  &.toggled .sidebar-menu {
+    visibility: visible;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
+// -webkit-transform: scale(1.1) translateX(-24px);
+// -ms-transform: scale(1.1) translateX(-24px);
+// transform: scale(1.1) translateX(-24px);
+// -webkit-transition: opacity 0.35s ease-out, -webkit-transform 0.35s ease-out;
+// transition: opacity 0.35s ease-out, -webkit-transform 0.35s ease-out;
+// transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+// transition: opacity 0.35s ease-out, transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+
+#page-content-wrap {
+  position: absolute;
+  height: 100%;
+  @include respond-to(phone-screen) { margin-left: 0 }
+  @include respond-to(small-screen) { margin-left: 150px }
+  @include respond-to(medium-screen) { margin-left: 200px }
+  @include respond-to(large-screen) { margin-left: 250px }
+}
+
+.container-fluid {
+  height: 100%;
+  padding-left: 50px;
+}
+
+#toggle-sidebar {
+  z-index: 1000;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border: 0;
+  background-color: transparent;
+  visibility: hidden;
+}
+
+div[class*="headline"] {
+  font-family: $roboto;
+  padding-bottom: 15px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    line-height: normal;
+    font-size: 35px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.3em;
+  }
+}
+
+div[class*="list"] {
+  // width: 100%;
+  // margin-top: 10px;
 }
