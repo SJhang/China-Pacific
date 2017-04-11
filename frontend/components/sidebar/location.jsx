@@ -47,8 +47,8 @@ const Location = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 // <img src="https://res.cloudinary.com/dsetpdsls/image/upload/v1484813999/1238036_10201991481652361_1800958299_n_edt93u.png"></img>
 
 export default Location;

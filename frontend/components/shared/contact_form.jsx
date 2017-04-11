@@ -9,18 +9,18 @@ class ContactForm extends React.Component {
       email: "",
       phone: "",
       message: ""
-    }
+    };
   }
 
   handleChange(e) {
     const name = e.target.name;
 
-    this.setState({[name]: e.target.value})
+    this.setState({[name]: e.target.value});
   }
 
   hangleSubmit(e) {
     e.preventDefault();
-    alert("message sent!")
+    alert("message sent!");
   }
 
   render () {

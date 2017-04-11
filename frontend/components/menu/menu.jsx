@@ -15,7 +15,7 @@ class Menu extends React.Component {
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll);
-  };
+  }
 
   componentWillUnmount () {
     window.removeEventListener('scroll', this.handleScroll);
@@ -39,7 +39,7 @@ class Menu extends React.Component {
         <MenuHeader />
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 

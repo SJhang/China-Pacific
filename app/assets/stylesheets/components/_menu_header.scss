@@ -1,9 +1,8 @@
 .menu-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  padding: 45px 0 45px 15%;
+  width: 100%;
+  padding: 45px 0;
   z-index: 900;
   background: white;
 }
@@ -11,7 +10,6 @@
 .menu-header {
   .menu-header-wrap {
     vertical-align: center;
-    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -41,7 +39,7 @@
 }
 
 .smaller {
-  padding: 8px 0 8px 15%;
+  padding: 8px 0;
   transition: all .5s ease;
 
   div {

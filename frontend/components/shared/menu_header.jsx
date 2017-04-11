@@ -51,7 +51,7 @@ const MenuHeader = (props) => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default withRouter(MenuHeader);

@@ -1,5 +1,5 @@
 .contact-page {
-  margin-top: 50px;
+  margin: 55px auto 10px;
 }
 
 .contact-page {
@@ -41,9 +41,21 @@
   }
 }
 
+
 .contact-desc {
+
+  @include respond-to(phone-screen) {
+    flex-direction: column;
+  }
+  @include respond-to(small-screen) {
+    flex-direction: column;
+  }
+
   .contact-map {
-    width: 420px;
-    height: 420px;
+
+    @include respond-to(phone-screen) { width: 90%; height: 350px; margin: 25px 0; }
+    @include respond-to(small-screen) { width: 420px; height: 420px; margin: 15px; }
+    @include respond-to(medium-screen) { width: 420px; height: 420px; margin: 15px; }
+    @include respond-to(large-screen) { width: 420px; height: 420px; margin: 15px; }
   }
 }

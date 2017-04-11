@@ -31,13 +31,15 @@ const App = (props) => {
 
       {/* Page Content */}
       <div id="page-content-wrap">
-        <button
-          id="toggle-sidebar"
-          onClick={(e) => toggleSidebar(e)}>
-          <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
-        </button>
+        <div className="phone-header">
+          <button
+            id="toggle-sidebar"
+            onClick={(e) => toggleSidebar(e)}>
+            <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
+          </button>
+        </div>
         <main className="container-fluid" id="main">
-            {props.children}
+          {props.children}
         </main>
       </div>
     </div>
