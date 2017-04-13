@@ -7,7 +7,7 @@ const MenuHeader = (props) => {
   };
 
   return (
-    <header className="menu-header" id="header">
+    <header className="fixed-top menu-header" id="menu-header">
       <div className="menu-header-wrap">
         <div className="sides animated pulse">
           <IndexLink

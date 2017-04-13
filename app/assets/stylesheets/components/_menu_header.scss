@@ -1,35 +1,31 @@
-.menu-header {
+#menu-header {
   position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 45px 0;
   z-index: 900;
   background: white;
 }
 
-.menu-header {
-  .menu-header-wrap {
-    vertical-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
+.menu-header-wrap {
+  vertical-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .menu-header-wrap {
   div {
     font-family: $roboto;
     font-weight: 300;
-    color: #757575;
-    font-size: 21px;
+
+    @include respond-to("phone-screen") { font-size: 1rem; };
   }
 }
 
 .menu-header-wrap > div {
   a {
+    color: #757575 !important;
     text-decoration: none;
   }
 }
@@ -39,7 +35,11 @@
 }
 
 .smaller {
-  padding: 8px 0;
+  @include respond-to("phone-screen") { padding: 8px 50px 8px 50px; };
+  @include respond-to(small-screen) { padding: 8px 50px 8px 200px; };
+  @include respond-to(medium-screen) { padding: 8px 50px 8px 250px; };
+  @include respond-to(large-screen) { padding: 8px 50px 8px 300px; };
+
   transition: all .5s ease;
 
   div {
@@ -48,5 +48,14 @@
       font-size: 16px;
       transition: all .5s ease;
     }
+  }
+}
+#outer-wrap.toggled {
+  .smaller {
+    @include respond-to("phone-screen") { padding: 8px 5px 8px 105px; };
+  }
+
+  .menu-header {
+    @include respond-to("phone-screen") { padding: 30px 5px 30px 105px; flex-wrap: wrap; };
   }
 }

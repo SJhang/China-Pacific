@@ -4,7 +4,7 @@
 
 .location-page {
   .location-wrap {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -14,32 +14,21 @@
   }
 }
 
-.location-wrap {
-  .location-title {
-    font-family: $roboto;
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 15px;
+.location-title {
+  width: 100%;
+  padding-bottom: 15px;
 
-
-    h1 {
-      font-family: $roboto-slab;
-      line-height: normal;
-      font-size: 70px;
-      text-align: left;
-    }
+  h1 {
+    @include title;
   }
-
-  .location-desc {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
 }
+
+.location-desc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .location-image {
   height: 200px;
   background-image: url("https://res.cloudinary.com/dsetpdsls/image/upload/c_scale,w_1994,y_0/v1490835416/pexels-photo-212088_fdxlxf.png");
@@ -50,7 +39,7 @@
   border-radius: 4px;
   width: 100%;
 
-  @include respond-to(phone-screen) {
+  @include respond-to("phone-screen") {
   };
 }
 
@@ -112,7 +101,7 @@
 
 .location-specifics {
 
-  @include respond-to(phone-screen) {
+  @include respond-to("phone-screen") {
     flex-direction: column;
     height: inherit;
     min-width: inherit;

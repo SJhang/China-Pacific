@@ -35,18 +35,18 @@ const Root = ({store}) => {
       <Router history={hashHistory}>
         <Route path='/' component={App}>
           <IndexRoute component={SplashContainer}/>
-          <Route path='about' component={About}/>
-          <Route path='menu' component={MenuContainer}>
-            <IndexRoute component={MenuSplash}/>
+          <Route path='about' component={About} onEnter={_scrollTop}/>
+          <Route path='menu' component={MenuContainer} onEnter={_scrollTop}>
+            <IndexRoute component={MenuSplash} onEnter={_scrollTop}/>
             <Route path='sides' component={Sides} onEnter={_scrollTop}></Route>
             <Route path='lunch' component={LunchContainer} onEnter={_scrollTop}></Route>
             <Route path='sunset' component={SunsetContainer} onEnter={_scrollTop}></Route>
             <Route path='dinner' component={DinnerContainer} onEnter={_scrollTop}></Route>
             <Route path='chef' component={Chef} onEnter={_scrollTop}></Route>
           </Route>
-          <Route path='location' component={Location} />
-          <Route path='contact' component={Contact} />
-          <Route path='press' component={Press} />
+          <Route path='location' component={Location} onEnter={_scrollTop}/>
+          <Route path='contact' component={Contact} onEnter={_scrollTop}/>
+          <Route path='press' component={Press} onEnter={_scrollTop}/>
         </Route>
       </Router>
     </Provider>

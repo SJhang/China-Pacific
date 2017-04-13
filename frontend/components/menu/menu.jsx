@@ -24,16 +24,16 @@ class Menu extends React.Component {
   handleScroll (e) {
     e.preventDefault();
     if (e.srcElement.body.scrollTop > 210) {
-      $(document).find("#header").addClass("smaller");
+      $(document).find("#menu-header").addClass("smaller");
     } else {
-      $(document).find("#header").removeClass("smaller");
+      $(document).find("#menu-header").removeClass("smaller");
     }
   }
 
   render () {
     return (
       <div
-        className="menu-page"
+        className="row"
         id="top-menu"
         onScroll={this.handleScroll}>
         <MenuHeader />

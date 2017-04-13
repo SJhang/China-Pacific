@@ -4,7 +4,7 @@
 
 .contact-page {
   .contact-wrap {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -14,48 +14,39 @@
   }
 }
 
-.contact-wrap {
-  .contact-title {
-    font-family: $roboto;
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #aaa;
+.contact-title {
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #aaa;
 
-    h1 {
-      font-family: $roboto-slab;
-      line-height: normal;
-      font-size: 70px;
-      text-align: left;
-    }
-  }
-
-  .contact-desc {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  h1 {
+    @include title;
   }
 }
+
+.contact-desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
 
 
 .contact-desc {
 
-  @include respond-to(phone-screen) {
+  @include respond-to("phone-screen") {
     flex-direction: column;
   }
-  @include respond-to(small-screen) {
+  @include respond-to("small-screen") {
     flex-direction: column;
   }
 
   .contact-map {
 
-    @include respond-to(phone-screen) { width: 90%; height: 350px; margin: 25px 0; }
-    @include respond-to(small-screen) { width: 420px; height: 420px; margin: 15px; }
-    @include respond-to(medium-screen) { width: 420px; height: 420px; margin: 15px; }
-    @include respond-to(large-screen) { width: 420px; height: 420px; margin: 15px; }
+    @include respond-to("phone-screen") { width: 90%; height: 350px; margin: 25px 0; }
+    @include respond-to("small-screen") { width: 420px; height: 420px; margin: 15px; }
+    @include respond-to("medium-screen") { width: 420px; height: 420px; margin: 15px; }
+    @include respond-to("large-screen") { width: 420px; height: 420px; margin: 15px; }
   }
 }

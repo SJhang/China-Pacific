@@ -1,18 +1,112 @@
 $large-screen: 1140px;
-$touch-pad-screen: 768px;
+$touch-pad-screen: 1024px;
 $phone-screen: 540px;
 
+$breakpoints: (
+  "phone-screen"  : 540px,
+  "small-screen"  : 720px,
+  "medium-screen" : 960px,
+  "large-screen"  : 1140px
+);
+
 @mixin respond-to($media) {
+  $value: map-get($breakpoints, $media);
+
+  @if ($value == 540px) {
+    @media screen and (max-width: $value) { @content; };
+  }
+  @else if ($value == 720px) {
+    @media screen and (min-width: 541px) and (max-width: 720px) { @content; };
+  }
+  @else if ($value == 960px) {
+    @media screen and (min-width: 721px) and (max-width: 960px) { @content; };
+  }
+  @else if ($value == 1140px) {
+    @media screen and (min-width: 961px) { @content; };
+  }
+}
+
+@mixin main-page($media, $sidebar-width) {
+  @include respond-to($media) {
+    margin-left: $sidebar-width;
+  }
+}
+
+@mixin sidebar-size($media, $sidebar-width) {
+  @include respond-to($media) {
+    width: $sidebar-width + 50px;
+  }
+}
+
+@mixin menu-header-responsive($media, $sidebar-width) {
+  width: 100vw;
+
+  @include respond-to($media) {
+    padding: 40px 50px 40px $sidebar-width + 100px;
+  };
+}
+
+@mixin sidebar-width-responsive {
+  li { border-bottom: 1px solid #212121; }
+
+  @media screen and (max-width: 540px) {
+    width: 0;
+    margin-left: -100px;
+    #sidebar-logo {
+      width: 100%;
+      i { visibility: hidden; };
+      span { width: 100%; text-align: center; };
+    }
+
+    #toggle-sidebar { visibility: visible; };
+    .sns { padding: 0; };
+  }
+  @media screen and (min-width: 541px) and (max-width: 760px) {
+    width: 100px;
+    #toggle-sidebar { visibility: hidden; };
+    .sns { padding: 0; };
+  }
+  @media screen and (min-width: 761px) and (max-width: 960px){
+    width: 150px;
+    #toggle-sidebar { visibility: hidden; };
+    #list-item {
+      flex-direction: row;
+      i { visibility: hidden; };
+    }
+  }
+  @media screen and (min-width: 961px) {
+    width: 200px;
+    #toggle-sidebar { visibility: hidden; };
+    #list-item {
+      flex-direction: row;
+      i { visibility: hidden; };
+    }
+  }
+}
+
+@mixin title($font-size: 70px, $font-weight: 500) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: $roboto-slab;
+  line-height: normal;
+
+  @include respond-to("phone-screen") { font-size: 45px; justify-content: center; };
+}
+
+@mixin header-responsive($media) {
   @if $media == phone-screen {
-    @media only screen and (max-width: $phone-screen) { @content; }
+
   }
   @else if $media == small-screen {
-    @media only screen and (min-width: $phone-screen + 1) and (max-width: $touch-pad-screen) { @content; }
+
   }
   @else if $media == medium-screen {
-    @media only screen and (min-width: $touch-pad-screen + 1) and (max-width: $large-screen){ @content; }
+
   }
   @else if $media == large-screen {
-    @media only screen and (min-width: $large-screen + 1) { @content; }
+
   }
 }

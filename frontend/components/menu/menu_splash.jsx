@@ -26,9 +26,9 @@ const MenuSplash = (props) => {
   };
 
   return (
-    <div className="menu-splash" id="menu-div">
+    <div className="col-12" id="menu-splash">
       <div className="menu-wrap">
-        <div className="menu-headline">
+        <div className="menu-title">
           <h1>Menu</h1>
           <i
             className="fa fa-file-pdf-o fa-2x"
@@ -84,7 +84,7 @@ const MenuSplash = (props) => {
       </div>
     </div>
 
-  )
-}
+  );
+};
 
 export default MenuSplash;

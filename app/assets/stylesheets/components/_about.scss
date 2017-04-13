@@ -4,7 +4,7 @@
 
 .about-page {
   .about-wrap {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
       margin-left: auto;
     }
 
-    @include respond-to(phone-screen) {
+    @include respond-to("phone-screen") {
       flex-direction: column;
 
       .about-location {
@@ -42,14 +42,7 @@
       }
     }
 
-    h1 {
-      font-family: $roboto-slab;
-      line-height: normal;
-      font-size: 70px;
-      text-align: left;
-    }
-
-
+    h1 { @include title; };
   }
 }
 
@@ -83,7 +76,7 @@
 }
 
 .about-desc {
-  @include respond-to(phone-screen) {
+  @include respond-to("phone-screen") {
     flex-direction: column;
     margin-top: 50px;
 
