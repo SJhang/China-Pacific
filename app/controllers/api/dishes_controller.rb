@@ -6,12 +6,27 @@ class Api::DishesController < ApplicationController
   end
 
   def show
+    @dish = Dish.find(params[:id])
   end
 
   def create
+    @dish = Dish.new(dish_params)
+    if @dish.save
+      render :show
+    else
+      render json: @dish.errors.full_messages, status: 422
+    end
   end
 
   def dish_params
-    params.require(:dish).permit(:name, :sauce, :ingredient, :catagory, :thumbnail_url)
+    params.require(:dish).permit(
+      :name,
+      :prices,
+      :spiciness,
+      :sauce,
+      :ingredient,
+      :catagory,
+      :thumbnail_url
+    )
   end
 end
