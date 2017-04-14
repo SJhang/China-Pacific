@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170302053013) do
+ActiveRecord::Schema.define(version: 20170414062649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
+
+  create_table "dishes", force: :cascade do |t|
+    t.string   "name",                          null: false
+    t.string   "sauce"
+    t.string   "catagory",                      null: false
+    t.text     "ingredient"
+    t.string   "thumbnail_url"
+    t.hstore   "prices",                        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "spiciness",     default: false, null: false
+    t.index ["name"], name: "index_dishes_on_name", unique: true, using: :btree
+    t.index ["prices"], name: "index_dishes_on_prices", using: :gin
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false

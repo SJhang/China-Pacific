@@ -15,6 +15,9 @@ const MenuItem = ({menuType}) => {
             <span className="calories"></span>
             <span className="protein"></span>
           </div>
+          <div className="properties">
+            <span className="sauce"></span>
+          </div>
           <p className="ingredients"></p>
         </div>
       </div>

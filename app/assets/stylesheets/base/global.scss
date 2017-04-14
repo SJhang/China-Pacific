@@ -95,13 +95,17 @@ div[class$="headline"] {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  
+
   h1 {
     @include title(45px);
   }
 
   ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 }
 
