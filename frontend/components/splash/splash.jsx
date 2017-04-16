@@ -11,7 +11,7 @@ class Splash extends React.Component {
 
   render () {
     return (
-      <div className="splash-page">
+      <div className="col-12">
         <video playsInline autoPlay muted loop id="bgvid">
           <source
             src="https://res.cloudinary.com/dsetpdsls/video/upload/v1490753846/343379421_myyo4g.mp4"

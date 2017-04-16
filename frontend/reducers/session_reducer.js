@@ -19,7 +19,6 @@ export const SessionReducer = (state = _defaultState, action) => {
 
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-
       let currentUser = action.currentUser;
       return merge(newState, { currentUser, errors: [] });
     case RECEIVE_ERRORS:
@@ -27,7 +26,7 @@ export const SessionReducer = (state = _defaultState, action) => {
     case LOGOUT:
       return merge({}, _defaultState);
     case TOGGLE_MODAL:
-      return merge(newState, { modal: !newState.modal })
+      return merge(newState, { modal: !newState.modal });
     default:
       return state;
   }

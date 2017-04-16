@@ -1,1 +1,1 @@
-json.partial! "api/dish", dish: @dish
+json.partial! "dish", dish: @dish

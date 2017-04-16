@@ -18,6 +18,27 @@ class Api::DishesController < ApplicationController
     end
   end
 
+  def update
+    @dish = Dish.find(params[:id])
+    if @dish.update_attributes(dish_params)
+      render :show
+    else
+      render json: @dish.errors.full_messages, status: 401
+    end
+  end
+
+  def edit
+    @dish = Dish.find(params[:id])
+  end
+
+  def destroy
+    @dish = Dish.find(params[:id])
+    @dish.destroy
+    render :show
+  end
+  
+  private
+
   def dish_params
     params.require(:dish).permit(
       :name,

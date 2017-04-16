@@ -4,12 +4,10 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 
-export const login = user => {
-  
-  return {
+export const login = user => ({
   type: LOGIN,
   user
-}};
+});
 
 export const logout = () => ({
   type: LOGOUT

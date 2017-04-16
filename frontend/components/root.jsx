@@ -5,7 +5,6 @@ import App from './app';
 
 // custom components
 import SplashContainer from './splash/splash_container';
-
 import MenuContainer from './menu/menu_container';
 import LunchContainer from './menu/lunch_container';
 import SunsetContainer from './menu/sunset_container';
@@ -13,21 +12,23 @@ import DinnerContainer from './menu/dinner_container';
 import Sides from './menu/sides';
 import Chef from './menu/chef';
 import MenuSplash from './menu/menu_splash';
-
 import About from './sidebar/about';
 import Location from './sidebar/location';
 import Contact from './sidebar/contact';
 import Press from './sidebar/press';
 
+import { fetchDishes } from '../actions/dish_actions';
+
 const Root = ({store}) => {
-  const _populateStore = () => {
-    //dispatch fetch all menues
-  };
 
   const _scrollTop = (nextState) => {
     if (nextState.location.action === "PUSH") {
       window.scrollTo(0, 0);
     }
+  };
+
+  const _populateDishStore = (nextState) => {
+    store.dispatch(fetchDishes());
   };
 
   return (
@@ -37,7 +38,7 @@ const Root = ({store}) => {
           <IndexRoute component={SplashContainer}/>
           <Route path='about' component={About} onEnter={_scrollTop}/>
           <Route path='menu' component={MenuContainer} onEnter={_scrollTop}>
-            <IndexRoute component={MenuSplash} onEnter={_scrollTop}/>
+            <IndexRoute component={MenuSplash} onEnter={_scrollTop, _populateDishStore}/>
             <Route path='sides' component={Sides} onEnter={_scrollTop}></Route>
             <Route path='lunch' component={LunchContainer} onEnter={_scrollTop}></Route>
             <Route path='sunset' component={SunsetContainer} onEnter={_scrollTop}></Route>
