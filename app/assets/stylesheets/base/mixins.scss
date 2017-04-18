@@ -93,7 +93,7 @@ $breakpoints: (
   font-family: $roboto-slab;
   line-height: normal;
 
-  @include respond-to("phone-screen") { font-size: 45px; justify-content: center; };
+  @include respond-to("phone-screen") { font-size: 35px; justify-content: center; };
 }
 
 @mixin header-responsive($media) {

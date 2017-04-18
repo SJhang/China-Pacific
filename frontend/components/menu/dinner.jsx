@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import MenuList from '../menu_items/menu_list';
 
 class Dinner extends React.Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class Dinner extends React.Component {
           <div className="dinner-headline">
             <h1>Dinner</h1>
           </div>
-          <div className="dinner-list"></div>
-        </div>
+          <MenuList name="dinner" />
+         </div>
       </div>
     )
   }

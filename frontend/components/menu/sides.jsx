@@ -1,8 +1,7 @@
 import React from 'react';
-import MenuList from './menu_item';
+import MenuList from '../menu_items/menu_list';
 
 const Sides = (props) => {
-
   return (
     <div
       className="sides-container"
@@ -11,11 +10,7 @@ const Sides = (props) => {
         <div className="sides-headline">
           <h1>Sides</h1>
         </div>
-        <div className="sides-list-wrapper">
-          <MenuList menuType={"Chick Broccoli"}/>
-          <MenuList />
-          <MenuList />
-        </div>
+        <MenuList name="sides" />
       </div>
     </div>
   );

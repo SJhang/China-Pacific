@@ -17,7 +17,6 @@ export const getDish = (dishId, success, errors) => {
 };
 
 export const getDishes = (success, errors) => {
-  debugger;
   $.ajax({
     url: 'api/dishes',
     success,

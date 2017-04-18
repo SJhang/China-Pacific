@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuList from '../menu_items/menu_list';
 
 const Chef = (props) => {
   return (
@@ -10,7 +11,7 @@ const Chef = (props) => {
         <div className="chef-headline">
           <h1>Chef's Recommendation</h1>
         </div>
-        <div className="chef-list"></div>
+        <MenuList name="chef" />
       </div>
     </div>
   )

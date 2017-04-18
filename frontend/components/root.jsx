@@ -16,6 +16,7 @@ import About from './sidebar/about';
 import Location from './sidebar/location';
 import Contact from './sidebar/contact';
 import Press from './sidebar/press';
+import MenuEditContainer from './menu_items/menu_edit_container';
 
 import { fetchDishes } from '../actions/dish_actions';
 
@@ -39,11 +40,21 @@ const Root = ({store}) => {
           <Route path='about' component={About} onEnter={_scrollTop}/>
           <Route path='menu' component={MenuContainer} onEnter={_scrollTop}>
             <IndexRoute component={MenuSplash} onEnter={_scrollTop, _populateDishStore}/>
-            <Route path='sides' component={Sides} onEnter={_scrollTop}></Route>
-            <Route path='lunch' component={LunchContainer} onEnter={_scrollTop}></Route>
-            <Route path='sunset' component={SunsetContainer} onEnter={_scrollTop}></Route>
-            <Route path='dinner' component={DinnerContainer} onEnter={_scrollTop}></Route>
-            <Route path='chef' component={Chef} onEnter={_scrollTop}></Route>
+            <Route path='sides' component={Sides} onEnter={_scrollTop}>
+              <Route path='sides/:menuId' component={MenuEditContainer} />
+            </Route>
+            <Route path='lunch' component={LunchContainer} onEnter={_scrollTop}>
+              <Route path='lunch/:menuId' component={MenuEditContainer} />
+            </Route>
+            <Route path='sunset' component={SunsetContainer} onEnter={_scrollTop}>
+              <Route path='sunset/:menuId' component={MenuEditContainer} />
+            </Route>
+            <Route path='dinner' component={DinnerContainer} onEnter={_scrollTop}>
+              <Route path='dinner/:menuId' component={MenuEditContainer} />
+            </Route>
+            <Route path='chef' component={Chef} onEnter={_scrollTop}>
+              <Route path='chef/:menuId' component={MenuEditContainer} />
+            </Route>
           </Route>
           <Route path='location' component={Location} onEnter={_scrollTop}/>
           <Route path='contact' component={Contact} onEnter={_scrollTop}/>

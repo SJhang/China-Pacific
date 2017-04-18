@@ -12,6 +12,8 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  @include respond-to("phone-screen") { width: 150px; flex-wrap: wrap; }
 }
 
 .menu-header-wrap {
@@ -25,13 +27,13 @@
 
 .menu-header-wrap > div {
   a {
-    color: #757575 !important;
+    color: #757575;
     text-decoration: none;
   }
 }
 
 .header-active {
-  color: #ec3524;
+  color: #ec3524 !important;
 }
 
 .smaller {
@@ -57,5 +59,9 @@
 
   .menu-header {
     @include respond-to("phone-screen") { padding: 30px 5px 30px 105px; flex-wrap: wrap; };
+  }
+
+  .menu-header-wrap {
+    @include respond-to("phone-screen") { width: 150px; flex-wrap: wrap; }
   }
 }
