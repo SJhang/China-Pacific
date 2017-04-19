@@ -9,7 +9,15 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-CLOUD_NAME: "dvob94x30"
-UPLOAD_PRESET: "mjwsxesp"
-API_KEY: "919969976147474"
-GOOGLE_MAP_API_KEY: "AIzaSyB6WMtVpOkuo1h_8KZNKvtaKoCe-6H6n6A"
+#
+# production:
+#   CLOUD_NAME: "dvob94x30"
+#   UPLOAD_PRESET: "mjwsxesp"
+#   API_KEY: "919969976147474"
+#   GOOGLE_MAP_API_KEY: "AIzaSyB6WMtVpOkuo1h_8KZNKvtaKoCe-6H6n6A"
+#
+# development:
+#   CLOUD_NAME: "dvob94x30"
+#   UPLOAD_PRESET: "mjwsxesp"
+#   API_KEY: "919969976147474"
+#   GOOGLE_MAP_API_KEY: "AIzaSyB6WMtVpOkuo1h_8KZNKvtaKoCe-6H6n6A"
