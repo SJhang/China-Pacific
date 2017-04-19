@@ -1,5 +1,3 @@
-require 'byebug'
-
 class Api::DishesController < ApplicationController
   def index
     @dishes = Dish.all
@@ -36,7 +34,7 @@ class Api::DishesController < ApplicationController
     @dish.destroy
     render :show
   end
-  
+
   private
 
   def dish_params
