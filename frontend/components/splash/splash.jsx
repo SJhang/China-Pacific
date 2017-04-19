@@ -14,7 +14,7 @@ class Splash extends React.Component {
       <div className="col-12">
         <video playsInline autoPlay muted loop id="bgvid">
           <source
-            src="https://res.cloudinary.com/dsetpdsls/video/upload/v1490753846/343379421_myyo4g.mp4"
+            src="https://res.cloudinary.com/dvob94x30/video/upload/v1492617491/343379421_prpxp3.mp4"
             type="video/mp4">
           </source>
         </video>

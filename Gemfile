@@ -32,6 +32,7 @@ gem 'bootstrap-material-design'
 gem 'figaro'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

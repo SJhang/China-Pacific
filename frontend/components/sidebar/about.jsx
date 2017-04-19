@@ -10,7 +10,7 @@ const About = (props) => {
         </div>
         <div className="about-desc">
           <div className="about-pic">
-            <img src="https://res.cloudinary.com/dsetpdsls/image/upload/v1490822000/o_cvcmpk.png"></img>
+            <img src="https://res.cloudinary.com/dvob94x30/image/upload/v1492617482/o_pvxkki.png"></img>
           </div>
           <div className="about-blurb">
             <p>

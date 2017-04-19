@@ -135,5 +135,22 @@ Dish.create!(name: "Shrimp with Hot Pepper Sauce", spiciness: true, catagory: "e
 Dish.create!(name: "Sesame Shrimp", spiciness: true, catagory: "entree", prices: { dinner: "11.50" })
 Dish.create!(name: "Orange Shrimp", spiciness: true, catagory: "entree", prices: { dinner: "11.50" })
 
-Dish.create!(name: "China Pacific Fried Rice", catagory: "entree", prices: { lunch: "7.50" })
+## Egg Fu Yung
+Dish.create!(name: "Chicken or Beef Egg Fu Yung", catagory: "entree", prices: { dinner: "12.95" })
+Dish.create!(name: "Shrimp or Pork Egg Fu Yung", catagory: "entree", prices: { dinner: "12.95" })
+Dish.create!(name: "Combination Egg Fu Yung", catagory: "entree", prices: { dinner: "12.95" })
+
+## Fried Rice
+Dish.create!(name: "Tofu Fried Rice", catagory: "entree", prices: { dinner: "8.50"})
+Dish.create!(name: "Chicken or Pork Fried Rice", catagory: "entree", prices: { dinner: "8.50"})
+Dish.create!(name: "Beef or Shrimp Fried Rice", catagory: "entree", prices: { dinner: "8.95"})
+Dish.create!(name: "BBQ Pork Fried Rice", catagory: "entree", prices: { dinner: "8.95"})
+Dish.create!(name: "China Pacific Fried Rice", catagory: "entree", prices: { lunch: "7.50", dinner: "9.50" }, ingredient: "Beef, Chicken, and Shrimp")
+
+## Noodle
+Dish.create!(name: "Chicken or Pork Lo Mein", catagory: "entree", prices: { dinner: "8.95"})
+Dish.create!(name: "Beef or Shrimp Lo Mein", catagory: "entree", prices: { dinner: "9.50"})
+Dish.create!(name: "China Pacific Lo Mein", catagory: "entree", prices: { dinner: "10.50"}, ingredient: "Beef, Chicken, and Shrimp")
+Dish.create!(name: "Pan Fried Noodle", catagory: "entree", prices: { dinner: "10.50"})
+
 Dish.create!(name: "Shrimp and Chicken Delight", catagory: "entree", prices: { lunch: "7.95" })

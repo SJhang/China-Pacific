@@ -16,6 +16,10 @@ class Dinner extends React.Component {
         <div className="dinner-wrapper">
           <div className="dinner-headline">
             <h1>Dinner</h1>
+            <ul>
+              <li>Make it Family Dinner with extra $2.50</li>
+              <li>Serves with a soup of your choice (8oz) and an eggroll</li>
+            </ul>
           </div>
           <MenuList name="dinner" />
          </div>

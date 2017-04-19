@@ -93,7 +93,7 @@ $breakpoints: (
   font-family: $roboto-slab;
   line-height: normal;
 
-  @include respond-to("phone-screen") { font-size: 35px; justify-content: center; };
+  @include respond-to("phone-screen") { font-size: 35px; justify-content: center; text-align: center; };
 }
 
 @mixin header-responsive($media) {
@@ -109,4 +109,19 @@ $breakpoints: (
   @else if $media == large-screen {
 
   }
+}
+
+@mixin background-image-config($url) {
+  background-image: url(#{$url});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin overlay() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

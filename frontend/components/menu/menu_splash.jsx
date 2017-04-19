@@ -45,6 +45,7 @@ const MenuSplash = (props) => {
                 11 A.M. ~ 3 P.M.
               </p>
             </div>
+            <div className="menu-overlay"></div>
           </div>
           <div
             className="lunch-div animated flipInX"
@@ -55,6 +56,7 @@ const MenuSplash = (props) => {
                 11 A.M. ~ 3 P.M.
               </p>
             </div>
+            <div className="menu-overlay"></div>
           </div>
           <div
             className="sunset-div animated flipInX"
@@ -63,6 +65,7 @@ const MenuSplash = (props) => {
             <div className="hours">
               <p>3 P.M. ~ 6 P.M.</p>
             </div>
+            <div className="menu-overlay"></div>
           </div>
           <div
             className="dinner-div animated flipInX"
@@ -71,6 +74,7 @@ const MenuSplash = (props) => {
             <div className="hours">
               <p>6 P.M. ~ 10 P.M.</p>
             </div>
+            <div className="menu-overlay"></div>
           </div>
           <div
             className="chef-div animated flipInX"
@@ -79,6 +83,7 @@ const MenuSplash = (props) => {
             <div className="hours">
               <p>6 P.M. ~ 10 P.M.</p>
             </div>
+            <div className="menu-overlay"></div>
           </div>
         </div>
       </div>
