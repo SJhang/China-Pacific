@@ -17,7 +17,7 @@ module.exports = {
       compress:{
         warnings: true
       }
-    })
+    }),
   ],
   module: {
     loaders: [
