@@ -1,7 +1,18 @@
+.on-splash {
+  #menu-header {
+    visibility: visible;
+  }
+
+  #menu-splash {
+    margin-top: 110px;
+  }
+}
+
 #menu-header {
   position: fixed;
   z-index: 900;
   background: white;
+  visibility: hidden;
 }
 
 .menu-header-wrap {

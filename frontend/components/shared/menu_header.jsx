@@ -6,6 +6,12 @@ const MenuHeader = (props) => {
     return `/menu/${property}`;
   };
 
+  if (props.location.pathname.split("/").length === 3) {
+    $("#top-menu").addClass("on-splash");
+  } else {
+    $("#top-menu").removeClass("on-splash");
+  }
+
   return (
     <header className="fixed-top menu-header" id="menu-header">
       <div className="menu-header-wrap">

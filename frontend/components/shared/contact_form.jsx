@@ -41,7 +41,6 @@ class ContactForm extends React.Component {
               type="text"
               tabIndex="1"
               required
-              autoFocus
               name="name"
               onChange={e => this.handleChange(e)}></input>
           </fieldset>

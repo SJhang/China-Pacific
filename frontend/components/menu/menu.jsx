@@ -21,6 +21,10 @@ class Menu extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  componentWillUnmount() {
+
+  }
+
   handleScroll (e) {
     e.preventDefault();
     if (e.srcElement.body.scrollTop > 210) {

@@ -2,8 +2,7 @@
 #menu-splash {
   padding-bottom: 30px;
   padding-top: 50px;
-  margin-top: 110px;
-  @include respond-to("phone-screen") { margin-top: 50px; };
+  margin-top: 0;
 
   .menu-wrap {
     width: 90%;
