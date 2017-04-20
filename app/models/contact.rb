@@ -1,4 +1,4 @@
-class Contact < MailForm:Base
+class Contact < MailForm::Base
   validates :name, :email, :message, presence: true
   validates :email, format: /@/
   validates :phone, length: { minimum: 10 }
