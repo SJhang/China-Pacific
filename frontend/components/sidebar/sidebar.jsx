@@ -11,50 +11,18 @@ class Sidebar extends React.Component {
 
   }
 
-  redirectToHome(e) {
-    if (this.props.router.location.pathname !== '/') {
-      this.toggleDeactive();
-      this.props.router.push('/');
-    }
-  }
-
-  redirectToAbout(e) {
-    if (this.props.router.location.pathname !== '/about') {
-      this.toggleDeactive(e);
-      this.toggleActive(e);
-      this.props.router.push('/about');
-    }
-  }
-
-  redirectToMenu(e) {
-    if (this.props.router.location.pathname !== '/menu') {
-      this.toggleDeactive(e);
-      this.toggleActive(e);
-      this.props.router.push('/menu');
-    }
-  }
-
-  redirectToLocation(e) {
-    if (this.props.router.location.pathname !== '/location') {
-      this.toggleDeactive(e);
-      this.toggleActive(e);
-      this.props.router.push('/location');
-    }
-  }
-
-  redirectToContact(e) {
-    if (this.props.router.location.pathname !== '/contact') {
-      this.toggleDeactive(e);
-      this.toggleActive(e);
-      this.props.router.push('/contact');
-    }
-  }
-
-  redirectToPress(e) {
-    if (this.props.router.location.pathname !== '/press') {
-      this.toggleDeactive(e);
-      this.toggleActive(e);
-      this.props.router.push('/press');
+  redirectTo(path, e) {
+    if (path === "home") {
+      if (this.props.router.location.pathname !== '/') {
+        this.toggleDeactive();
+        this.props.router.push('/');
+      }
+    } else {
+      if (this.props.router.location.pathname !== path) {
+        this.toggleDeactive(e);
+        this.toggleActive(e);
+        this.props.router.push(path);
+      }
     }
   }
 
@@ -86,7 +54,7 @@ class Sidebar extends React.Component {
         <li
           className="sidebar-logo"
           data-parent="#sidebar">
-          <a onClick={(e) => this.redirectToHome(e)}>
+          <a onClick={(e) => this.redirectTo("home", e)}>
             <i className="material-icons">home</i>
             <span>China Pacific</span>
             <span>Restaurant</span>
@@ -96,7 +64,7 @@ class Sidebar extends React.Component {
           <a
             className="about"
             id="list-item"
-            onClick={(e) => this.redirectToAbout(e)}>
+            onClick={(e) => this.redirectTo("about", e)}>
             <i className="material-icons">store_mall_directory</i>
             <span>ABOUT</span>
           </a>
@@ -105,7 +73,7 @@ class Sidebar extends React.Component {
           <a
             className="menu"
             id="list-item"
-            onClick={(e) => this.redirectToMenu(e)}>
+            onClick={(e) => this.redirectTo("menu", e)}>
             <i className="material-icons">restaurant_menu</i>
             <span>MENU</span>
           </a>
@@ -114,7 +82,7 @@ class Sidebar extends React.Component {
           <a
             className="location"
             id="list-item"
-            onClick={(e) => this.redirectToLocation(e)}>
+            onClick={(e) => this.redirectTo("location", e)}>
             <i className="material-icons">place</i>
             <span>LOCATION</span>
           </a>
@@ -123,7 +91,7 @@ class Sidebar extends React.Component {
           <a
             className="contact"
             id="list-item"
-            onClick={(e) => this.redirectToContact(e)}>
+            onClick={(e) => this.redirectTo("contact", e)}>
             <i className="material-icons">contacts</i>
             <span>CONTACT</span>
           </a>
@@ -132,7 +100,7 @@ class Sidebar extends React.Component {
           <a
             className="press"
             id="list-item"
-            onClick={(e) => this.redirectToPress(e)}>
+            onClick={(e) => this.redirectTo("press", e)}>
             <i className="material-icons">message</i>
             <span>PRESS</span>
           </a>
@@ -157,8 +125,5 @@ class Sidebar extends React.Component {
     );
   }
 }
-// <a className="google">
-//   <i className="fa fa-google fa-2x" aria-hidden="true"></i>
-// </a>
 
 export default withRouter(Sidebar);
