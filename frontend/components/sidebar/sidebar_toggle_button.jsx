@@ -18,7 +18,6 @@ class ToggleSidebar extends React.Component {
   };
 
   handleTouchStart(e) {
-    e.preventDefault();
     this.handleStart(e.targetTouches[0].clientX);
   }
 
@@ -62,13 +61,14 @@ class ToggleSidebar extends React.Component {
 
   render () {
     return (
-      <div className="phone-header">
+      <div
+        className="phone-header"
+        onTouchStart={(e) => this.handleTouchStart(e)}
+        onTouchMove={(e) => this.handleTouchMove(e)}
+        onTouchEnd={() => this.handleTouchEnd()}>
         <button
           id="toggle-sidebar"
-          onClick={(e) => this.toggleSidebar(e)}
-          onTouchStart={e => this.handleTouchStart(e)}
-          onTouchMove={e => this.handleTouchMove(e)}
-          onTouchEnd={() => this.handleTouchEnd()}>
+          onClick={(e) => this.toggleSidebar(e)}>
           <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
         </button>
       </div>

@@ -1,0 +1,9 @@
+hardship & feature:
+  - without using any modules, built a custom slideable and clickable react component
+
+upcoming features:
+  - cart for food
+  - press ( data scraping from yelp)
+  - edit page or edit modal for each dish for admin to be able to make changes
+    - add new pics, descriptions, tags
+  
