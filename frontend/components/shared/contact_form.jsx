@@ -12,6 +12,9 @@ class ContactForm extends React.Component {
     };
   }
 
+  componentDidMount() {
+  }
+
   handleChange(e) {
     const name = e.target.name;
 
@@ -32,7 +35,7 @@ class ContactForm extends React.Component {
         </div>
         <form
           className="contact-form"
-          action="mailto:sonik4595@gmail.com"
+          action={`mailto:`}
           method="post"
           encType="text/plain">
           <fieldset className="form-name">

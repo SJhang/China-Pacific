@@ -57,7 +57,7 @@ body {
 .menu-header {
   width: 100vw;
 
-  @include respond-to("phone-screen") { margin-top: 55px; padding: 30px 50px 30px 50px; }
+  @include respond-to("phone-screen") { padding: 30px 50px 30px 50px; }
   @include menu-header-responsive("small-screen", 100px);
   @include menu-header-responsive("medium-screen", 150px);
   @include menu-header-responsive("large-screen", 200px);

@@ -4,24 +4,27 @@ import React from 'react';
 import Sidebar from './shared/sidebar';
 
 const App = (props) => {
+
   const toggleSidebar = (e) => {
     e.preventDefault();
     let outer = $("#outer-wrap");
-
     outer.toggleClass("toggled");
-
-    // failed to incorporate sequencial loading
-    // let duration = 1000;
-    //
-    // sidebarOptions.each(i => {
-    //   if (outer.hasClass("toggled")) {
-    //     setTimeout(() => $(sidebarOptions[i]).addClass("animated fadeInLeft"), 200);
-    //   } else {
-    //     $(sidebarOptions[i]).removeClass("animated fadeInLeft");
-    //   }
-    // });
   };
 
+  const swipeToggleSidebar = e => {
+    e.preventDefault();
+    $("#outer-wrap").swipe({
+      swipeStatus:function(event, phase, direction, distance, duration, fingers) {
+        if (phase === "move" && direction === "right") {
+          $("#outer-wrap").toggleClass("toggled");
+          return false;
+        } else if (phase === "move" && direction === "left") {
+          $("#outer-wrap").toggleClass("toggled");
+          return false;
+        }
+      }
+    });
+  };
 
   return (
     <div id="outer-wrap">
