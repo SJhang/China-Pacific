@@ -36,6 +36,8 @@ class Sidebar extends React.Component {
 
   toggleActive (e) {
     $(e.target.parentNode).addClass("menu-active");
+    let outer = $("#outer-wrap");
+    outer.toggleClass("toggled");
   }
 
   toggleDeactive (e) {

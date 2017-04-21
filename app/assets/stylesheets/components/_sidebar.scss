@@ -20,12 +20,12 @@
   height: 100%;
   z-index: 1300;
   padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-
   @include sidebar-width-responsive;
+  -webkit-transition: all 0.5s cubic-bezier(.165,.84,.44,1);
+  -moz-transition: all 0.5s cubic-bezier(.165,.84,.44,1);
+  -o-transition: all 0.5s cubic-bezier(.165,.84,.44,1);
+  transition: all 0.5s cubic-bezier(.165,.84,.44,1);
+
 }
 
 

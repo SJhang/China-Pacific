@@ -48,7 +48,7 @@
 }
 
 .smaller {
-  @include respond-to("phone-screen") { padding: 8px 50px 8px 50px; };
+
   @include respond-to(small-screen) { padding: 8px 50px 8px 200px; };
   @include respond-to(medium-screen) { padding: 8px 50px 8px 250px; };
   @include respond-to(large-screen) { padding: 8px 50px 8px 300px; };
@@ -69,7 +69,7 @@
   }
 
   .menu-header {
-    @include respond-to("phone-screen") { padding: 30px 5px 30px 105px; flex-wrap: wrap; };
+    @include respond-to("phone-screen") { padding: 60px 5px 10px 105px; flex-wrap: wrap; };
   }
 
   .menu-header-wrap {
