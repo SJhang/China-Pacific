@@ -17,7 +17,8 @@ module.exports = {
       compress:{
         warnings: true
       }
-    })
+    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV'])
   ],
   module: {
     loaders: [
