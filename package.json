@@ -2,20 +2,18 @@
   "name": "ChinaPacific",
   "version": "1.0.0",
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "directories": {
+    "doc": "docs",
     "test": "test",
     "webpack": "webpack"
   },
   "engines": {
-    "node": "6.10.1",
+    "node": "4.1.1",
     "npm": "*"
   },
   "scripts": {
-    "heroku-postbuild": "webpack --config webpack.config.prod.js",
-    "postinstall": "webpack",
-    "webpack": "webpack --watch",
-    "build": "webpack -p --config webpack.config.prod.js"
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
